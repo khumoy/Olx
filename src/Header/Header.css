@@ -1,0 +1,31 @@
+.header {
+    padding: 15px;
+   transition: 0.4s;
+   position: relative;
+  
+}
+.logoImg {
+    width: 60px;
+    height: 60px;
+
+}
+.light {
+    color: #002F34;
+    background-color: rgb(255, 255, 255);
+}
+.dark {
+    color: rgb(248, 248, 248);
+    background-color: #002F34;
+}
+.buttons {
+    border: none ;
+    outline: none;
+    font-weight: bold;
+    
+}
+.header a {
+    text-decoration: none;
+}
+.headerPage {
+    display: none  !important ;
+}

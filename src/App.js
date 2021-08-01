@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from 'react'
+import { Switch } from 'react-router-dom'
+import './App.css'
+import { Header } from './Header/Header';
+import ThemeContext from './theme-context';
+import './Header/Header.css'
+// import Categorys from './Categorys';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [theme, setTheme] = useState("dark");
+
+    const toggleTheme = () => {
+        setTheme(theme == "dark" ? "light" : "dark")
+    }
+    return (
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+            <div className="container-fluid px-0">
+                <Header />
+
+                <Switch >
+
+                </Switch>
+            </div>
+        </ThemeContext.Provider>
+    )
 }
 
-export default App;
+export default App
